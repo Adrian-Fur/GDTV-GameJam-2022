@@ -3,7 +3,9 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     //Variables
+    [SerializeField]
     float jumpVelocity = 10f;
+    [SerializeField]
     float moveSpeed = 40f;
     float inputHorizontal;
     bool facingRight = true;
@@ -60,11 +62,11 @@ public class PlayerControl : MonoBehaviour
 
     void Flip()
     {
-       Vector3 currentScale = gameObject.transform.localScale;
-       currentScale.x *= -1;
-       gameObject.transform.localScale = currentScale;
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
 
-       facingRight = !facingRight;
+        facingRight = !facingRight;
     }
 
     bool IsGrounded()
@@ -80,10 +82,10 @@ public class PlayerControl : MonoBehaviour
             rigidbody2d.velocity = new Vector2(-moveSpeed, rigidbody2d.velocity.y);
             animator.SetBool("isRunning", true);
 
-        } 
-        else 
+        }
+        else
         {
-            if(Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
                 rigidbody2d.velocity = new Vector2(+moveSpeed, rigidbody2d.velocity.y);
                 animator.SetBool("isRunning", true);
