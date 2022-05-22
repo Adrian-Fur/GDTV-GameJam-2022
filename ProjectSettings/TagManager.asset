@@ -14,7 +14,7 @@ TagManager:
   - Platform
   - Player
   - Enemies
-  - 
+  - Coins
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Enemies
     uniqueID: 1745357107
+    locked: 0
+  - name: Coins
+    uniqueID: 3220777511
     locked: 0
   - name: Player
     uniqueID: 3932536625

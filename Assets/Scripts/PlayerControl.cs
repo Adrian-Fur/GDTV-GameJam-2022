@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour
     float inputHorizontal;
     bool facingRight = true;
     bool isAlive = true;
+    bool isRunning = false;
     bool isSliding = false;
     [SerializeField]
     float slideSpeed = 5f;
@@ -56,7 +57,7 @@ public class PlayerControl : MonoBehaviour
 
         Movement();
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && isRunning)
         {
             Slide();
         }
@@ -130,6 +131,7 @@ public class PlayerControl : MonoBehaviour
         {
             rigidbody2d.velocity = new Vector2(-moveSpeed, rigidbody2d.velocity.y);
             animator.SetBool("isRunning", true);
+            isRunning = true;
 
         }
         else
@@ -138,12 +140,14 @@ public class PlayerControl : MonoBehaviour
             {
                 rigidbody2d.velocity = new Vector2(+moveSpeed, rigidbody2d.velocity.y);
                 animator.SetBool("isRunning", true);
+                isRunning = true;
 
             }
             else
             {
                 rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
                 animator.SetBool("isRunning", false);
+                isRunning = false;
             }
         }
     }
