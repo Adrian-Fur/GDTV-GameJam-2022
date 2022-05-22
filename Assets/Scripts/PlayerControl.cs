@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
@@ -10,11 +11,16 @@ public class PlayerControl : MonoBehaviour
     float inputHorizontal;
     bool facingRight = true;
     bool isAlive = true;
+    bool isSliding = false;
+    [SerializeField]
+    float slideSpeed = 5f;
+
 
     //References
     Rigidbody2D rigidbody2d;
     CapsuleCollider2D capsuleCollider2D;
     BoxCollider2D boxCollider2D;
+    public CapsuleCollider2D slideCollider2D;
     [SerializeField]
     LayerMask platformsLayerMask;
     Animator animator;
@@ -50,6 +56,11 @@ public class PlayerControl : MonoBehaviour
 
         Movement();
 
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Slide();
+        }
+
         if (inputHorizontal > 0 && !facingRight)
         {
             Flip();
@@ -61,6 +72,36 @@ public class PlayerControl : MonoBehaviour
         }
 
         Die();
+    }
+
+    void Slide()
+    {
+        isSliding = true;
+        animator.SetBool("isSlide", true);
+        boxCollider2D.enabled = false;
+        capsuleCollider2D.enabled = false;
+        slideCollider2D.enabled = true;
+        // if (transform.localScale.x > 0)
+        // {
+        //     // rigidbody2d.AddForce(Vector2.right * slideSpeed);
+        //     rigidbody2d.velocity = new Vector2(slideSpeed, rigidbody2d.velocity.y);
+        // }
+        // else 
+        // {
+        //     // rigidbody2d.AddForce(Vector2.left * slideSpeed);
+        //     rigidbody2d.velocity = new Vector2(-slideSpeed, rigidbody2d.velocity.y);
+        // }
+        StartCoroutine("StopSlide");
+    }
+
+    public IEnumerator StopSlide()
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("isSlide", false);
+        boxCollider2D.enabled = true;
+        capsuleCollider2D.enabled = true;
+        slideCollider2D.enabled = false;
+        isSliding = false;
     }
 
     void Jump()
@@ -109,10 +150,11 @@ public class PlayerControl : MonoBehaviour
 
     void Die()
     {
-        if (capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        if (capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemies")) || slideCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemies")))
         {
             isAlive = false;
             animator.SetTrigger("die");
+            FindObjectOfType<GameSession>().PlayerDeathProcess();
         }
     }
 }

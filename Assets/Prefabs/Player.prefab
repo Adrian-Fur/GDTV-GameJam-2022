@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1132105557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132105558}
+  - component: {fileID: 1132105559}
+  m_Layer: 7
+  m_Name: slideCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1132105558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132105557}
+  m_LocalRotation: {x: 0, y: 0, z: 0.348163, w: 0.9374341}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4501514044282019547}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.75}
+--- !u!70 &1132105559
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132105557}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2358494, y: 2.463635}
+  m_Size: {x: 2.011698, y: 4.705914}
+  m_Direction: 0
 --- !u!1 &4497455935530647367
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,7 +79,7 @@ Transform:
   - {fileID: 4501839781872207495}
   m_Father: {fileID: 4501514044282019547}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.52114}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.560035}
 --- !u!1 &4497517492883489229
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +112,7 @@ Transform:
   - {fileID: 4496609072256513837}
   m_Father: {fileID: 4501670647223295311}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -156.2255}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -161.53537}
 --- !u!1 &4498007520685461761
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +499,7 @@ Transform:
   - {fileID: 4496553877381790551}
   m_Father: {fileID: 4501670647223295311}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.202547}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -42.657635}
 --- !u!1 &4498192951985792201
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +699,7 @@ Transform:
   - {fileID: 4496776721493415743}
   m_Father: {fileID: 4496624479801698159}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.239538}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.23954}
 --- !u!1 &4498301237695446975
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +816,7 @@ Transform:
   - {fileID: 4496344782687450661}
   m_Father: {fileID: 4501670647223295311}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -165.45978}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 51.936924}
 --- !u!1 &4498503666149697773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1219,7 @@ Transform:
   - {fileID: 4501387296518984817}
   m_Father: {fileID: 4501514044282019547}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 96.49574}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 163.79306}
 --- !u!1 &4498930912282308515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1252,7 @@ Transform:
   - {fileID: 4501862156745526607}
   m_Father: {fileID: 4496664066165940959}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 24.197962}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 24.19796}
 --- !u!1 &4499055556161193037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1291,7 @@ Transform:
   - {fileID: 4496521396270472731}
   - {fileID: 4501670647223295311}
   - {fileID: 4496495463338920703}
+  - {fileID: 1132105558}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1314,7 +1363,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14377737, y: 2.4266386}
+  m_Offset: {x: -0.14377737, y: 0.31216908}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1325,7 +1374,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3738832, y: 5.2601166}
+  m_Size: {x: 2.3738832, y: 1.0311778}
   m_EdgeRadius: 0
 --- !u!114 &114973503847475445
 MonoBehaviour:
@@ -1341,6 +1390,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpVelocity: 50
   moveSpeed: 15
+  slideSpeed: 30
+  slideCollider2D: {fileID: 1132105559}
   platformsLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1357,6 +1408,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09802494, y: 2.783911}
-  m_Size: {x: 2.1860297, y: 5.6267796}
+  m_Offset: {x: -0.16799408, y: 2.6766367}
+  m_Size: {x: 2.325968, y: 5.841328}
   m_Direction: 0

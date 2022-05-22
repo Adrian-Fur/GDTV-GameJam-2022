@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6450746171804878044}
   - component: {fileID: 6450746171804878047}
   - component: {fileID: 6450746171804878033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,8 +132,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6584575, y: 0.77165735}
-  m_Size: {x: 3.5598574, y: 8.9665165}
+  m_Offset: {x: 0.6584575, y: 1.0082425}
+  m_Size: {x: 3.5598574, y: 9.439685}
   m_Direction: 0
 --- !u!114 &6450746171804878033
 MonoBehaviour:
@@ -157,7 +157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2509488873148224660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 402502242510688309}
   - component: {fileID: 6660890122204164272}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3_shield_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3698655644869217105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3416197722472742216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4520149925915697158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9086100606957501893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7335207168614377876}
   - component: {fileID: 8257577483468436786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3_right lag_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687770395714646427}
   - component: {fileID: 6778445353211572555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3_left arm_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5598398273217919950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4376868528138669447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2815282428611706329}
   - component: {fileID: 6305061588922315197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3_head_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6548146780220886015}
   - component: {fileID: 142032492165998365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3_body_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6245679122023461236}
   - component: {fileID: 7052399182883162654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3_right arm_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7592710105922318153}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bone_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -925,7 +925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2662430877347566725}
   - component: {fileID: 2136480764265017219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3_left lag_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1009,7 +1009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935026987421700208}
   - component: {fileID: 8084859382584769252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3_sword_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
