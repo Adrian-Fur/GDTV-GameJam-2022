@@ -9,9 +9,11 @@ public class PlayerControl : MonoBehaviour
     float moveSpeed = 40f;
     float inputHorizontal;
     bool facingRight = true;
+    bool isAlive = true;
 
     //References
     Rigidbody2D rigidbody2d;
+    CapsuleCollider2D capsuleCollider2D;
     BoxCollider2D boxCollider2D;
     [SerializeField]
     LayerMask platformsLayerMask;
@@ -22,9 +24,13 @@ public class PlayerControl : MonoBehaviour
         rigidbody2d = transform.GetComponent<Rigidbody2D>();
         boxCollider2D = transform.GetComponent<BoxCollider2D>();
         animator = transform.GetComponent<Animator>();
+        capsuleCollider2D = transform.GetComponent<CapsuleCollider2D>();
     }
     void Update()
     {
+        if (!isAlive)
+            return;
+            
         inputHorizontal = Input.GetAxisRaw("Horizontal");
 
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
@@ -53,6 +59,8 @@ public class PlayerControl : MonoBehaviour
         {
             Flip();
         }
+
+        Die();
     }
 
     void Jump()
@@ -96,6 +104,15 @@ public class PlayerControl : MonoBehaviour
                 rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
                 animator.SetBool("isRunning", false);
             }
+        }
+    }
+
+    void Die()
+    {
+        if (capsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        {
+            isAlive = false;
+            animator.SetTrigger("die");
         }
     }
 }

@@ -1,18 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovment : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Variables
+    [SerializeField]
+    float enemyMoveSpeed = 1f;
+    float inputHorizontal;
+    bool facingLeft = true;
+    
+    //References
+    Rigidbody2D rigidBody2D;
+
     void Start()
     {
-        
-    }
+        rigidBody2D = transform.GetComponent<Rigidbody2D>();
+    }   
 
-    // Update is called once per frame
     void Update()
     {
-        
+        rigidBody2D.velocity = new Vector2(-enemyMoveSpeed, 0f);
+    }
+
+    void OnTriggerExit2D(Collider2D other) 
+    {
+        enemyMoveSpeed = -enemyMoveSpeed;
+        FlipEnemy();
+    }
+
+    void FlipEnemy()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingLeft = !facingLeft;
     }
 }
