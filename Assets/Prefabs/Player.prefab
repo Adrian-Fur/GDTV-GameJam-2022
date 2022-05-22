@@ -31,7 +31,7 @@ Transform:
   - {fileID: 4501839781872207495}
   m_Father: {fileID: 4501514044282019547}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.560035}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -74.30416}
 --- !u!1 &4497517492883489229
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ Transform:
   - {fileID: 4496609072256513837}
   m_Father: {fileID: 4501670647223295311}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -164.18835}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 139.02353}
 --- !u!1 &4498007520685461761
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +451,7 @@ Transform:
   - {fileID: 4496553877381790551}
   m_Father: {fileID: 4501670647223295311}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -42.657635}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -17.160051}
 --- !u!1 &4498192951985792201
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +768,7 @@ Transform:
   - {fileID: 4496344782687450661}
   m_Father: {fileID: 4501670647223295311}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 49.580704}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 126.47747}
 --- !u!1 &4498503666149697773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1052,7 @@ Transform:
   - {fileID: 4501402763532342193}
   m_Father: {fileID: 4501514044282019547}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -80.13494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -68.50855}
 --- !u!1 &4498529782947382437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1171,7 @@ Transform:
   - {fileID: 4501387296518984817}
   m_Father: {fileID: 4501514044282019547}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 164.5592}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 88.64414}
 --- !u!1 &4498930912282308515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,7 +1294,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 25
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpVelocity: 50
-  moveSpeed: 40
+  moveSpeed: 15
   platformsLayerMask:
     serializedVersion: 2
     m_Bits: 64

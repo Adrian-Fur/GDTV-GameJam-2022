@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    [SerializeField]
+    //Variables
     float jumpVelocity = 10f;
-    [SerializeField]
     float moveSpeed = 40f;
+    float inputHorizontal;
+    bool facingRight = true;
 
+    //References
     Rigidbody2D rigidbody2d;
     BoxCollider2D boxCollider2D;
     [SerializeField]
@@ -21,18 +23,48 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
+        inputHorizontal = Input.GetAxisRaw("Horizontal");
+
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
-        {   
-            rigidbody2d.velocity = Vector2.up * jumpVelocity;
+        {
+            animator.SetTrigger("takeOf");
+            Jump();
+        }
+
+        if (IsGrounded() == true)
+        {
+            animator.SetBool("jump", false);
+        }
+        else
+        {
+            animator.SetBool("jump", true);
         }
 
         Movement();
-        // Flip();
+
+        if (inputHorizontal > 0 && !facingRight)
+        {
+            Flip();
+        }
+
+        if (inputHorizontal < 0 && facingRight)
+        {
+            Flip();
+        }
+    }
+
+    void Jump()
+    {
+        rigidbody2d.velocity = Vector2.up * jumpVelocity;
     }
 
     void Flip()
     {
-       
+       Vector3 currentScale = gameObject.transform.localScale;
+       currentScale.x *= -1;
+       gameObject.transform.localScale = currentScale;
+
+       facingRight = !facingRight;
     }
 
     bool IsGrounded()
@@ -46,20 +78,22 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             rigidbody2d.velocity = new Vector2(-moveSpeed, rigidbody2d.velocity.y);
+            animator.SetBool("isRunning", true);
+
         } 
         else 
         {
             if(Input.GetKey(KeyCode.RightArrow))
             {
                 rigidbody2d.velocity = new Vector2(+moveSpeed, rigidbody2d.velocity.y);
+                animator.SetBool("isRunning", true);
+
             }
             else
             {
                 rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
+                animator.SetBool("isRunning", false);
             }
         }
-
-        //animator.SetBool("isRunning", true);
-        
     }
 }
