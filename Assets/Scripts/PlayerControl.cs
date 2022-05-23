@@ -75,6 +75,11 @@ public class PlayerControl : MonoBehaviour
         Die();
     }
 
+    public Vector3 GetPosition()
+    {
+        return transform.position;
+    }
+
     void Slide()
     {
         isSliding = true;
@@ -82,16 +87,6 @@ public class PlayerControl : MonoBehaviour
         boxCollider2D.enabled = false;
         capsuleCollider2D.enabled = false;
         slideCollider2D.enabled = true;
-        // if (transform.localScale.x > 0)
-        // {
-        //     // rigidbody2d.AddForce(Vector2.right * slideSpeed);
-        //     rigidbody2d.velocity = new Vector2(slideSpeed, rigidbody2d.velocity.y);
-        // }
-        // else 
-        // {
-        //     // rigidbody2d.AddForce(Vector2.left * slideSpeed);
-        //     rigidbody2d.velocity = new Vector2(-slideSpeed, rigidbody2d.velocity.y);
-        // }
         StartCoroutine("StopSlide");
     }
 
