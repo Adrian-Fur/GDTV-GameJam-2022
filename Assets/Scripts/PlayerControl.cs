@@ -84,7 +84,6 @@ public class PlayerControl : MonoBehaviour
     {
         isSliding = true;
         animator.SetBool("isSlide", true);
-        boxCollider2D.enabled = false;
         capsuleCollider2D.enabled = false;
         slideCollider2D.enabled = true;
         StartCoroutine("StopSlide");
@@ -94,7 +93,6 @@ public class PlayerControl : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("isSlide", false);
-        boxCollider2D.enabled = true;
         capsuleCollider2D.enabled = true;
         slideCollider2D.enabled = false;
         isSliding = false;
@@ -116,7 +114,7 @@ public class PlayerControl : MonoBehaviour
 
     bool IsGrounded()
     {
-        RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f, Vector2.down, 0.1f, platformsLayerMask);
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f, Vector2.down, 1f, platformsLayerMask);
         return raycastHit2D.collider != null;
     }
 

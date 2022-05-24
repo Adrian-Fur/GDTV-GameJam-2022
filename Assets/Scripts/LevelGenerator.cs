@@ -5,12 +5,9 @@ public class LevelGenerator : MonoBehaviour
 {
     const float PLAYER_DISTANCE_SPAWN_LEVEL_PART = 200f;
 
-    [SerializeField]
-    Transform levelStart;
-    [SerializeField]
-    List<Transform> levelPartsList;
-    [SerializeField]
-    PlayerControl player;
+    [SerializeField] Transform levelStart;
+    [SerializeField] List<Transform> levelPartsList;
+    [SerializeField] PlayerControl player;
     Vector3 lastEndPosition;
 
     void Awake()
