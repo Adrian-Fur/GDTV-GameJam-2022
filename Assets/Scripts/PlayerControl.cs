@@ -91,10 +91,10 @@ public class PlayerControl : MonoBehaviour
 
     public IEnumerator StopSlide()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.8f);
         animator.SetBool("isSlide", false);
-        capsuleCollider2D.enabled = true;
         slideCollider2D.enabled = false;
+        capsuleCollider2D.enabled = true;
         isSliding = false;
     }
 

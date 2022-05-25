@@ -7,8 +7,8 @@ public class ChasingWall : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float minSpeed = 5f;
     [SerializeField] float maxSpeed = 20f;
-    float maxDistance = 100f;
-    float minDistance = 20f;
+    [SerializeField] float maxDistance = 100f;
+    [SerializeField] float minDistance = 20f;
     Rigidbody2D rigidBody2D;
     Transform target;
     Vector2 moveDirection;
