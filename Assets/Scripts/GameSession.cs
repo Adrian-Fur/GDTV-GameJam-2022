@@ -6,12 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameSession : MonoBehaviour
 {
     //Variables
-    [SerializeField]
-    int playerLives = 1;
-    [SerializeField]
-    TextMeshProUGUI scoreText;
-    [SerializeField]
-    int score = 0;
+    [SerializeField] int playerLives = 1;
+    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] int score = 0;
 
 
     void Awake()
@@ -47,6 +44,7 @@ public class GameSession : MonoBehaviour
     public void AddToScore(int pointsToAdd)
     {
         score += pointsToAdd;
+        Mathf.Clamp(score, 0, int.MaxValue);
         scoreText.text = score.ToString();
     }
 
