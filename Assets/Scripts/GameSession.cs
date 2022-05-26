@@ -18,13 +18,13 @@ public class GameSession : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else 
+        else
         {
             DontDestroyOnLoad(gameObject);
         }
     }
 
-    void Start() 
+    void Start()
     {
         scoreText.text = score.ToString();
     }
@@ -50,14 +50,14 @@ public class GameSession : MonoBehaviour
 
     void TakeLife()
     {
-        playerLives --;
+        playerLives--;
         StartCoroutine("ResetScene");
     }
 
     public IEnumerator ResetScene()
     {
         yield return new WaitForSeconds(0.5f);
-        int currnetSceneIndex = SceneManager.GetActiveScene().buildIndex; 
+        int currnetSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currnetSceneIndex);
     }
 
@@ -69,7 +69,7 @@ public class GameSession : MonoBehaviour
     public IEnumerator LoadGameOverScene()
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(5);
         Destroy(gameObject);
     }
 }
