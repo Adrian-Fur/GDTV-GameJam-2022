@@ -44,17 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50285a9e02c088e4d83fcaeab5efc4fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelStart: {fileID: 0}
+  levelStart: {fileID: 1687949756715030444, guid: 6a272a0629199d345a025733763fa1fb, type: 3}
   levelPartsList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2812490250184779440, guid: 85a6e72db41f5b349ab02525dcb1126c, type: 3}
+  - {fileID: 7387276388008701713, guid: d6f8c2452b9c1454799dd011941e00f9, type: 3}
+  - {fileID: 4457565137874187242, guid: 4f29d182474c28a46abe7472e4a0d8b8, type: 3}
+  - {fileID: 1146782060190730172, guid: b1dc95e02f3fb4a44863c70b952f7088, type: 3}
+  - {fileID: 8419881394349453951, guid: 4d6d56b22b7246f4d93dd80ea2ce4d25, type: 3}
+  - {fileID: 9021400874413488120, guid: a5512f4c032881d4ab24ace07ff3e57b, type: 3}
+  - {fileID: 5375537781010625108, guid: 75dc5447f6fff89458c97383fdf902ac, type: 3}
+  - {fileID: 5575064073198607425, guid: 48c4c08077bfe2c4a9f257f1553eb024, type: 3}
+  - {fileID: 3924207765618719490, guid: 4c884cbbc29d8694091d08619ac5c2ba, type: 3}
+  - {fileID: 4969992749702280308, guid: fa51b49db1260784e96c47f01cdb38a7, type: 3}
+  - {fileID: 6766194472972167577, guid: f8d2400577883bf4d87a6f68593b91b6, type: 3}
   player: {fileID: 0}

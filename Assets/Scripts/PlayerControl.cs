@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField]
     LayerMask platformsLayerMask;
     Animator animator;
+    AudioPlayer audioPlayer;
 
     void Awake()
     {
@@ -32,6 +33,7 @@ public class PlayerControl : MonoBehaviour
         boxCollider2D = transform.GetComponent<BoxCollider2D>();
         animator = transform.GetComponent<Animator>();
         capsuleCollider2D = transform.GetComponent<CapsuleCollider2D>();
+        audioPlayer = FindObjectOfType<AudioPlayer>();
     }
     void Update()
     {
@@ -149,6 +151,7 @@ public class PlayerControl : MonoBehaviour
         {
             isAlive = false;
             animator.SetTrigger("die");
+            audioPlayer.DeathClip();
             FindObjectOfType<GameSession>().PlayerDeathProcess();
         }
     }
