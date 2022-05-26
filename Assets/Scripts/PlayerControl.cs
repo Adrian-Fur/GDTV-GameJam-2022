@@ -125,7 +125,6 @@ public class PlayerControl : MonoBehaviour
             rigidbody2d.velocity = new Vector2(-moveSpeed, rigidbody2d.velocity.y);
             animator.SetBool("isRunning", true);
             isRunning = true;
-
         }
         else
         {
@@ -134,7 +133,6 @@ public class PlayerControl : MonoBehaviour
                 rigidbody2d.velocity = new Vector2(+moveSpeed, rigidbody2d.velocity.y);
                 animator.SetBool("isRunning", true);
                 isRunning = true;
-
             }
             else
             {
