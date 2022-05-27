@@ -1390,7 +1390,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpVelocity: 50
   moveSpeed: 15
-  slideSpeed: 30
   slideCollider2D: {fileID: 1132105559}
   platformsLayerMask:
     serializedVersion: 2

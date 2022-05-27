@@ -4,26 +4,20 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     //Variables
-    [SerializeField]
-    float jumpVelocity = 10f;
-    [SerializeField]
-    float moveSpeed = 40f;
+    [SerializeField] float jumpVelocity = 10f;
+    [SerializeField] float moveSpeed = 40f;
     float inputHorizontal;
     bool facingRight = true;
     bool isAlive = true;
     bool isRunning = false;
     bool isSliding = false;
-    [SerializeField]
-    float slideSpeed = 5f;
-
 
     //References
     Rigidbody2D rigidbody2d;
     CapsuleCollider2D capsuleCollider2D;
     BoxCollider2D boxCollider2D;
     public CapsuleCollider2D slideCollider2D;
-    [SerializeField]
-    LayerMask platformsLayerMask;
+    [SerializeField] LayerMask platformsLayerMask;
     Animator animator;
     AudioPlayer audioPlayer;
 
@@ -35,6 +29,7 @@ public class PlayerControl : MonoBehaviour
         capsuleCollider2D = transform.GetComponent<CapsuleCollider2D>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
     }
+
     void Update()
     {
         if (!isAlive)

@@ -10,7 +10,6 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] int score = 0;
 
-
     void Awake()
     {
         int gameSessionsNumber = FindObjectsOfType<GameSession>().Length;
@@ -31,14 +30,7 @@ public class GameSession : MonoBehaviour
 
     public void PlayerDeathProcess()
     {
-        if (playerLives > 1)
-        {
-            TakeLife();
-        }
-        else
-        {
-            GameOver();
-        }
+        GameOver();
     }
 
     public void AddToScore(int pointsToAdd)
@@ -56,19 +48,6 @@ public class GameSession : MonoBehaviour
     public void ResetScore()
     {
        score = 0;
-    }
-
-    void TakeLife()
-    {
-        playerLives--;
-        StartCoroutine("ResetScene");
-    }
-
-    public IEnumerator ResetScene()
-    {
-        yield return new WaitForSeconds(0.5f);
-        int currnetSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currnetSceneIndex);
     }
 
     void GameOver()

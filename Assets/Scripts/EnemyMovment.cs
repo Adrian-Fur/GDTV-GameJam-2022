@@ -3,8 +3,7 @@ using UnityEngine;
 public class EnemyMovment : MonoBehaviour
 {
     //Variables
-    [SerializeField]
-    float enemyMoveSpeed = 1f;
+    [SerializeField] float enemyMoveSpeed = 1f;
     float inputHorizontal;
     bool facingLeft = true;
     

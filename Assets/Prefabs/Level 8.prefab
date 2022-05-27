@@ -1121,7 +1121,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSpikes (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5959751115479504114, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
 --- !u!4 &5973468503740084352 stripped
 Transform:
@@ -1187,7 +1188,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSpikes (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5959751115479504114, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
 --- !u!4 &5973468503710039618 stripped
 Transform:
@@ -1499,7 +1501,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSpikes (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5959751115479504114, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
 --- !u!4 &5973468504027726712 stripped
 Transform:
@@ -1885,7 +1888,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSpikes (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5959751115479504114, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
 --- !u!4 &5973468503970647216 stripped
 Transform:
@@ -1955,7 +1959,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSpikes (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5959751115479504114, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
 --- !u!4 &5973468504468694656 stripped
 Transform:
@@ -2913,7 +2918,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSpikes (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5959751115479504114, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
 --- !u!4 &5973468504543145957 stripped
 Transform:
@@ -3389,7 +3395,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSpikes
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5959751115479504114, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
 --- !u!4 &5973468504884731269 stripped
 Transform:
@@ -4191,7 +4198,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformSpikes (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5959751115479504114, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c45b6162e14fc744baa1bf1a05cbdec7, type: 3}
 --- !u!4 &5973468505345870492 stripped
 Transform:
