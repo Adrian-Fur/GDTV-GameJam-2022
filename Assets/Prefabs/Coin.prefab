@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3754503962397674411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12, y: -1.93, z: 0}
-  m_LocalScale: {x: 0.2934325, y: 0.29343253, z: 0.29343253}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -135,4 +135,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c0a96d9e4e0624e81b72a68a573c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsForCoin: 1
