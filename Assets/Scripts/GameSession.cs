@@ -3,9 +3,6 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-    //Variables
-    int playerLives = 1;
-
     LevelManager levelManager;
 
     void Awake()

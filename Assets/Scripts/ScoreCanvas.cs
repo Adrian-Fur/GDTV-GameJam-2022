@@ -3,7 +3,6 @@ using TMPro;
 
 public class ScoreCanvas : MonoBehaviour
 {
-    [SerializeField] int score = 0;
     [SerializeField] TextMeshProUGUI scoreText;
 
     ScoreKeeper scoreKeeper;

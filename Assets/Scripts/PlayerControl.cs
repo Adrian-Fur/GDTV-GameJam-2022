@@ -10,7 +10,6 @@ public class PlayerControl : MonoBehaviour
     bool facingRight = true;
     bool isAlive = true;
     bool isRunning = false;
-    bool isSliding = false;
 
     //References
     Rigidbody2D rigidbody2d;
@@ -20,6 +19,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] LayerMask platformsLayerMask;
     Animator animator;
     AudioPlayer audioPlayer;
+    PauseMenu pauseMenu;
 
     void Awake()
     {
@@ -28,6 +28,7 @@ public class PlayerControl : MonoBehaviour
         animator = transform.GetComponent<Animator>();
         capsuleCollider2D = transform.GetComponent<CapsuleCollider2D>();
         audioPlayer = FindObjectOfType<AudioPlayer>();
+        pauseMenu = FindObjectOfType<PauseMenu>();
     }
 
     void Update()
@@ -37,7 +38,7 @@ public class PlayerControl : MonoBehaviour
             
         inputHorizontal = Input.GetAxisRaw("Horizontal");
 
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space) && !pauseMenu.GameIsPaused)
         {
             animator.SetTrigger("takeOf");
             Jump();
@@ -52,19 +53,22 @@ public class PlayerControl : MonoBehaviour
             animator.SetBool("jump", true);
         }
 
-        Movement();
+        if (!pauseMenu.GameIsPaused)
+        {
+            Movement();
+        }
 
         if (Input.GetKeyDown(KeyCode.DownArrow) && isRunning)
         {
             Slide();
         }
 
-        if (inputHorizontal > 0 && !facingRight)
+        if (inputHorizontal > 0 && !facingRight && !pauseMenu.GameIsPaused)
         {
             Flip();
         }
 
-        if (inputHorizontal < 0 && facingRight)
+        if (inputHorizontal < 0 && facingRight && !pauseMenu.GameIsPaused)
         {
             Flip();
         }
@@ -79,7 +83,6 @@ public class PlayerControl : MonoBehaviour
 
     void Slide()
     {
-        isSliding = true;
         animator.SetBool("isSlide", true);
         capsuleCollider2D.enabled = false;
         slideCollider2D.enabled = true;
@@ -92,7 +95,6 @@ public class PlayerControl : MonoBehaviour
         animator.SetBool("isSlide", false);
         slideCollider2D.enabled = false;
         capsuleCollider2D.enabled = true;
-        isSliding = false;
     }
 
     void Jump()
