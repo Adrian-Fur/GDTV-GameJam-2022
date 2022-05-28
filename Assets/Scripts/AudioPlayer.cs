@@ -10,29 +10,69 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField] AudioClip deathClip;
     [SerializeField] [Range(0f, 1f)] float deathVolume = 1f;
 
-    AudioSource audioSource;
+    [Header("Main Menu Music and Level Music")]
+    [SerializeField] private AudioClip menuMusic;
+    [SerializeField] private AudioClip levelMusic;
 
-    public AudioClip newTrack;
+    [SerializeField] private AudioSource source;
 
     static AudioPlayer instance;
 
-    void Awake() 
+    public void Awake() 
     {   
-        audioSource = GetComponet<AudioSource>();
         ManageAudio();
     }
 
     void ManageAudio()
     {
-        if (instance != null)
+        if (instance == null)
         {
-            gameObject.SetActive(false);
-            Destroy(gameObject);
+            instance = this;
+            DontDestroyOnLoad(this);
         }
         else
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(this);
+            return;
+        }
+    }
+
+    public void Start() 
+    {
+        PlayMenuMusic();
+    }
+
+    public void PlayMenuMusic()
+    {
+        if (instance != null)
+        {
+            if (instance.source != null)
+            {
+                instance.source.Stop();
+                instance.source.clip = instance.menuMusic;
+                instance.source.Play();
+            }
+        }
+        else
+        {
+            Debug.LogError("Unavailable MusicPlayer component");
+        }
+    }
+
+    public void PlayGameMusic()
+    {
+        if (instance != null)
+        {
+            if (instance.source != null)
+            {
+                instance.source.Stop();
+                instance.source.clip = instance.levelMusic;
+                instance.source.Play();
+            }
+        }
+        else
+        {
+            Debug.LogError("Unavailable MusicPlayer component");
         }
     }
 

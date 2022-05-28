@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
         {
             scoreKeeper.ResetScore();
         }
-        audioPlayer.GameMusic();
+        audioPlayer.PlayGameMusic();
         SceneManager.LoadScene("MainGame");
     }
 
