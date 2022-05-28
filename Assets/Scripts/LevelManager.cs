@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     ScoreKeeper scoreKeeper;
+    AudioPlayer audioPlayer;
 
     void Awake() 
     {
         scoreKeeper = FindObjectOfType<ScoreKeeper>();    
+        audioPlayer = FindObjectOfType<AudioPlayer>();
     }
 
     public void LoadGame()
@@ -16,6 +18,7 @@ public class LevelManager : MonoBehaviour
         {
             scoreKeeper.ResetScore();
         }
+        audioPlayer.GameMusic();
         SceneManager.LoadScene("MainGame");
     }
 
@@ -32,5 +35,10 @@ public class LevelManager : MonoBehaviour
     public void LoadCredits()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void LoadOptions()
+    {
+        SceneManager.LoadScene("Options");
     }
 }

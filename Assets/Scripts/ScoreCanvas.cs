@@ -4,6 +4,7 @@ using TMPro;
 public class ScoreCanvas : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI highScoreText;
 
     ScoreKeeper scoreKeeper;
 
@@ -14,6 +15,7 @@ public class ScoreCanvas : MonoBehaviour
 
     void Update()
     {
-        scoreText.text = scoreKeeper.GetScore().ToString();
+        scoreText.text = $"Current Score: {scoreKeeper.GetScore().ToString()}";
+        highScoreText.text = $"HighScore: {PlayerPrefs.GetInt("HighScore", 0)}";
     }
 }

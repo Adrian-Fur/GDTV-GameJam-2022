@@ -34,6 +34,20 @@ public class ScoreKeeper : MonoBehaviour
     {
         score += pointsToAdd;
         Mathf.Clamp(score, 0, int.MaxValue);
+        CheckHighScore();
+    }
+
+    void CheckHighScore()
+    {
+        if (score > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+        }
+    }
+
+    public void ResetHighScore()
+    {
+        PlayerPrefs.DeleteKey("HighScore");
     }
 
     public void ResetScore()
