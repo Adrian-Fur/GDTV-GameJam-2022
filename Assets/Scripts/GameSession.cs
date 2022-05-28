@@ -1,17 +1,17 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
     //Variables
-    [SerializeField] int playerLives = 1;
-    [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] int score = 0;
+    int playerLives = 1;
+
+    LevelManager levelManager;
 
     void Awake()
     {
+        levelManager = FindObjectOfType<LevelManager>();
+
         int gameSessionsNumber = FindObjectsOfType<GameSession>().Length;
         if (gameSessionsNumber > 1)
         {
@@ -22,32 +22,10 @@ public class GameSession : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
-    void Start()
-    {
-        scoreText.text = score.ToString();
-    }
-
+    
     public void PlayerDeathProcess()
     {
         GameOver();
-    }
-
-    public void AddToScore(int pointsToAdd)
-    {
-        score += pointsToAdd;
-        Mathf.Clamp(score, 0, int.MaxValue);
-        scoreText.text = score.ToString();
-    }
-
-    public int GetScore()
-    {
-        return score;
-    }
-
-    public void ResetScore()
-    {
-       score = 0;
     }
 
     void GameOver()
@@ -58,7 +36,7 @@ public class GameSession : MonoBehaviour
     public IEnumerator LoadGameOverScene()
     {
         yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(5);
+        levelManager.LoadGameOver();
         Destroy(gameObject);
     }
 }

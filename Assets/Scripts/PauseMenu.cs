@@ -1,10 +1,16 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    
+    LevelManager levelManager;
+
+    private void Awake() 
+    {
+        levelManager = FindObjectOfType<LevelManager>();
+    }
 
     void Update()
     {
@@ -38,6 +44,6 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        levelManager.LoadMainMenu();
     }
 }

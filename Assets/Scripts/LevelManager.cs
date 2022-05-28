@@ -3,8 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    ScoreKeeper scoreKeeper;
+
+    void Awake() 
+    {
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();    
+    }
+
     public void LoadGame()
     {
+        scoreKeeper.ResetScore();
         SceneManager.LoadScene("MainGame");
     }
 
@@ -22,10 +30,4 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
 }

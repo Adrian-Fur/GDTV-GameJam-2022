@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class CoinPickup : MonoBehaviour
 {
-    [SerializeField]
-    int pointsForCoin = 10;
+    int pointsForCoin = 1;
     bool wasCollected = false;
     AudioPlayer audioPlayer;
 
@@ -18,7 +17,7 @@ public class CoinPickup : MonoBehaviour
         {
             wasCollected = true;
             audioPlayer.PickupCoinClip();
-            FindObjectOfType<GameSession>().AddToScore(pointsForCoin);
+            FindObjectOfType<ScoreKeeper>().AddToScore(pointsForCoin);
             gameObject.SetActive(false);
             Destroy(gameObject);
         }    
