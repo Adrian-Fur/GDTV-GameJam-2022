@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gamedev brothers team :)
+  m_text: Gamedev brother team :)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ca2eb08ee0b39ea489c8b3cafc0a2585, type: 2}
   m_sharedMaterial: {fileID: -7700952343718111307, guid: ca2eb08ee0b39ea489c8b3cafc0a2585, type: 2}
