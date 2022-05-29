@@ -51,4 +51,10 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene("Tips");
     }
+
+    public void PauseToMenu()
+    {
+        audioPlayer.PlayMenuMusic();
+        SceneManager.LoadScene("MainMenu");
+    }
 }
