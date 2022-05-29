@@ -3447,6 +3447,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3487837072791801170, guid: 9650cc45a8d39544f8a7c80208a2478f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3487837072791801172, guid: 9650cc45a8d39544f8a7c80208a2478f, type: 3}
       propertyPath: m_Name
       value: Fall Kill
