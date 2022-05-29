@@ -4,30 +4,60 @@ using TMPro;
 
 public class VolumeController : MonoBehaviour
 {
-    [SerializeField] Slider volumeSlider = null;
-    [SerializeField] TextMeshProUGUI volumeText = null;
+    [SerializeField] Slider volumeSlider;
 
-    private void Start() 
+    void Start()
     {
-        LoadValues();
+        if (!PlayerPrefs.HasKey("musicVolume"))
+        {
+            PlayerPrefs.SetFloat("musicVolume", 1);
+            Load();
+        }
+        else
+        {
+            Load();
+        }
     }
 
-    public void VolumeSlider(float volume)
+    public void ChangeVolume()
     {
-        volumeText.text = volume.ToString("0.0");
+        AudioListener.volume = volumeSlider.value;
+        Save();
     }
 
-    public void SaveVolumeButton()
+    private void Load()
     {
-        float volumeValue = volumeSlider.value;
-        PlayerPrefs.SetFloat("VolumeValue", volumeValue);
-        LoadValues();
+        volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
     }
 
-    void LoadValues()
+    private void Save()
     {
-        float volumeValue = PlayerPrefs.GetFloat("VolumeValue");
-        volumeSlider.value = volumeValue;
-        AudioListener.volume = volumeValue;
+        PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
     }
+    // [SerializeField] Slider volumeSlider = null;
+    // [SerializeField] TextMeshProUGUI volumeText = null;
+
+    // private void Start() 
+    // {
+    //     LoadValues();
+    // }
+
+    // public void VolumeSlider(float volume)
+    // {
+    //     volumeText.text = volume.ToString("0.0");
+    // }
+
+    // public void SaveVolumeButton()
+    // {
+    //     float volumeValue = volumeSlider.value;
+    //     PlayerPrefs.SetFloat("VolumeValue", volumeValue);
+    //     LoadValues();
+    // }
+
+    // void LoadValues()
+    // {
+    //     float volumeValue = PlayerPrefs.GetFloat("VolumeValue");
+    //     volumeSlider.value = volumeValue;
+    //     AudioListener.volume = volumeValue;
+    // }
 }
