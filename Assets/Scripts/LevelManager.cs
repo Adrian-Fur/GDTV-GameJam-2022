@@ -3,11 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public Texture2D cursorArrow;
+
     ScoreKeeper scoreKeeper;
     AudioPlayer audioPlayer;
 
     void Awake() 
     {
+        Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
         scoreKeeper = FindObjectOfType<ScoreKeeper>();    
         audioPlayer = FindObjectOfType<AudioPlayer>();
     }
@@ -18,6 +21,7 @@ public class LevelManager : MonoBehaviour
         {
             scoreKeeper.ResetScore();
         }
+        Cursor.visible = false;
         audioPlayer.PlayGameMusic();
         SceneManager.LoadScene("MainGame");
     }
@@ -29,6 +33,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadGameOver()
     {
+        Cursor.visible = true;
         SceneManager.LoadScene("GameOver");
     }
 
