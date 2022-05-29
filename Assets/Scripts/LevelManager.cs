@@ -41,4 +41,14 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene("Options");
     }
+
+    public void LoadControls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
+
+    public void LoadTips()
+    {
+        SceneManager.LoadScene("Tips");
+    }
 }
