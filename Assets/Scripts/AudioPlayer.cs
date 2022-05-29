@@ -53,10 +53,6 @@ public class AudioPlayer : MonoBehaviour
                 instance.source.Play();
             }
         }
-        else
-        {
-            Debug.LogError("Unavailable MusicPlayer component");
-        }
     }
 
     public void PlayGameMusic()
@@ -70,10 +66,6 @@ public class AudioPlayer : MonoBehaviour
                 instance.source.Play();
             }
         }
-        else
-        {
-            Debug.LogError("Unavailable MusicPlayer component");
-        }
     }
 
     public void PickupCoinClip()
@@ -86,10 +78,6 @@ public class AudioPlayer : MonoBehaviour
         PlayClip(deathClip, deathVolume);
     }
 
-    public void GameMusic()
-    {
-        
-    }
 
     void PlayClip(AudioClip clip, float volume)
     {

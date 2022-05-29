@@ -864,18 +864,18 @@ MonoBehaviour:
 
 
     he
-    can''t accept this fate and kill humans so he started joruney to fight for his
+    can''t accept this fate and kill humans so he start joruney to fight for his
     soul'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ca2eb08ee0b39ea489c8b3cafc0a2585, type: 2}
-  m_sharedMaterial: {fileID: -7700952343718111307, guid: ca2eb08ee0b39ea489c8b3cafc0a2585, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8aeef246d20af6a4ea95949435276876, type: 2}
+  m_sharedMaterial: {fileID: 1418466640227706550, guid: 8aeef246d20af6a4ea95949435276876, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281545523
-  m_fontColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -892,8 +892,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
