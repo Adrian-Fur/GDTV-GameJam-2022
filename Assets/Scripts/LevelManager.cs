@@ -34,6 +34,7 @@ public class LevelManager : MonoBehaviour
     public void LoadGameOver()
     {
         Cursor.visible = true;
+        audioPlayer.PlayMenuMusic();
         SceneManager.LoadScene("GameOver");
     }
 

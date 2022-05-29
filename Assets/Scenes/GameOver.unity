@@ -895,10 +895,10 @@ RectTransform:
   m_Father: {fileID: 403076498}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -973, y: 148}
-  m_SizeDelta: {x: 147.381, y: 46.998}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -13, y: 148}
+  m_SizeDelta: {x: 147.38098, y: 46.998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331427675
 MonoBehaviour:
@@ -946,7 +946,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3519233609133465074}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: PauseToMenu
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
