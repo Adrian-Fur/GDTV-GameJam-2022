@@ -63,4 +63,9 @@ public class LevelManager : MonoBehaviour
         audioPlayer.PlayMenuMusic();
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
